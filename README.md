@@ -1,18 +1,18 @@
 # Userspace for OSX
 
-### Git Tracking for Configuration Files
-[link to tutorial](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
+### [Git Track User Space](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
+
+### [Update Bash](.rsrc/updateBash.md)
+
+### Activate Default Profile
+* in home directory create/edit .bash_profile
+> source "${HOME}/.bashrc"
 
 # Installations
 
-### apt-get
-* vim
+### brew
 * tree
 * git
-* xsel
-* cntlm
-
-### apt
 * nodejs
 * npm
 	* react-native-cli
@@ -21,3 +21,6 @@
 
 ### curl
 * nvm
+
+# consider installing
+* cntlm

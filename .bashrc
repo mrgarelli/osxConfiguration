@@ -43,11 +43,3 @@ alias rct='/usr/local/bin/react-native'
 #________________________________________________________________________________
 #__________Open
 alias pdf="open"
-alias image='/usr/bin/xdg-open'
-
-# p equates to whichever python is active
-alias p='/opt/local/bin/python3.7'
-alias pip='sudo /opt/local/bin/python3.7 -m pip'
-alias create='python3.6 -m virtualenv env'
-alias activate='source env/bin/activate'
-alias ve='/usr/local/bin/virtualenv'
