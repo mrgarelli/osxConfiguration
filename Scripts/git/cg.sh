@@ -12,7 +12,7 @@ case "$1" in
 		# stage manually deleted or moved files
 		stageManualChanges cmd
 		# add/stage changes in all configuration files
-		command $cmd add ${HOME}'/.README.md'
+		command $cmd add ${HOME}'/README.md'
 		command $cmd add ${HOME}'/.bashrc'
 		command $cmd add ${HOME}'/.vimrc'
 		command $cmd add "${vscode}/keybindings.json"
