@@ -1,0 +1,16 @@
+{
+	"workbench.colorTheme": "Material Theme Palenight High Contrast",
+	"workbench.activityBar.visible": false,
+	"workbench.statusBar.visible": true,
+	"workbench.startupEditor": "none",
+	"editor.lineNumbers": "relative",
+	"editor.tabSize": 3,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"vim.useSystemClipboard": true,
+	"workbench.settings.editor": "json",
+	"editor.fontSize": 13,
+	"editor.tabCompletion": "onlySnippets",
+	"keyboard.dispatch": "keyCode",
+	"window.restoreWindows": "none",
+}
