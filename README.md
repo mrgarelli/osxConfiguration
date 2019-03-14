@@ -13,14 +13,15 @@
 ### brew
 * tree
 * git
+* cask
+	* iterm2
+* macvim (for clipboard+)
+
+# consider installing
 * nodejs
 * npm
 	* react-native-cli
 * linuxbrew-wrapper
 	* watchman
-
-### curl
 * nvm
-
-# consider installing
 * cntlm
