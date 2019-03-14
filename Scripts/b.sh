@@ -3,7 +3,7 @@
 bsh='/bin/bash'
 v='/usr/bin/vim'
 conf="${HOME}/.bashrc"
-locConf="${HOME}/.locrc"
+locConf="${HOME}/.locrc.sh"
 
 case "$1" in
 	"-e")
