@@ -21,3 +21,6 @@
 
 ### curl
 * nvm
+
+### pip (python3)
+* getopt

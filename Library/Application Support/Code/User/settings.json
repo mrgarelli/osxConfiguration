@@ -1,6 +1,6 @@
 {
 	"workbench.colorTheme": "Material Theme Palenight High Contrast",
-	"workbench.activityBar.visible": true,
+	"workbench.activityBar.visible": false,
 	"workbench.statusBar.visible": true,
 	"workbench.startupEditor": "none",
 	"editor.lineNumbers": "relative",
