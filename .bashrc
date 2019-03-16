@@ -38,7 +38,7 @@ alias todo='bash ~/Scripts/todo/run.sh'
 alias clk='bash ~/Scripts/clk/run.sh'
 
 alias ns='npm start'
-alias rct='/usr/local/bin/react-native'
+alias rct='bash ~/Scripts/rct/run.sh'
 
 #________________________________________________________________________________
 #__________Open
