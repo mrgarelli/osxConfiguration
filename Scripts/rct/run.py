@@ -1,6 +1,6 @@
 import getopt
 import sys
-from tools import bashCmd, Message, Directory
+from tools import Message, BashAPI
 
 version = Message('Version: 1.0')
 
@@ -42,15 +42,13 @@ for opt, arg in options:
 		version.smartPrint()
 		sys.exit(0) # exit properly
 
-# get the full executable path of our bash api script
-dir = Directory()
-api = dir.relPath('api.sh')
+api = BashAPI('api.sh')
 if remainder == ['d']:
-	bashCmd(api, 'documentationMigration')
+	api.cmd('documentationMigration')
 elif remainder == ['l']:
-	bashCmd(api, 'linterInstallation')
+	api.cmd('linterInstallation')
 elif remainder == ['r']:
-	bashCmd(api, 'runProject')
+	api.cmd('runProject')
 else:
 	print(version.content)
 	print()
