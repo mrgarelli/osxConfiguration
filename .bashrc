@@ -44,13 +44,6 @@ alias rn='python3 ~/Scripts/rn/run.py'
 #__________Open
 alias pdf="open"
 
-# p equates to whichever python is active
-alias p='/opt/local/bin/python3.7'
-alias pip='sudo /opt/local/bin/python3.7 -m pip'
-alias create='python3.6 -m virtualenv env'
-alias activate='source env/bin/activate'
-alias ve='/usr/local/bin/virtualenv'
-
 alias urldecode='python3 -c "import sys, urllib.parse as ul; \
     print(ul.unquote_plus(sys.argv[1]))"'
 
