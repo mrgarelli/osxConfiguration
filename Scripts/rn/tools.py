@@ -1,5 +1,20 @@
 import subprocess
+import sys
 import os
+import getopt
+
+def parseOptions(args, shortOpts, longOpts):
+	# checks that the option exists
+	try:
+		# returns options and remainder (if success)
+		return getopt.getopt(
+			args,
+			shortOpts,
+			longOpts
+			)
+	except getopt.GetoptError as err:
+		print('ERROR:', err)
+		sys.exit(1) # exit with error
 
 class Directory():
 	def __init__(self):

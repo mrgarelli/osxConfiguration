@@ -1,6 +1,8 @@
-import getopt
+# To Do
+#	implement verbose
+
 import sys
-from tools import Message, BashAPI
+from tools import Message, BashAPI, parseOptions
 
 version = Message('Version: 1.0')
 
@@ -17,20 +19,17 @@ commands
 
 verbose = False
 
-# checks that the option exists
-try:
-	# returns options and remainder (if success)
-	options, remainder = getopt.getopt(
-		sys.argv[1:],
-		'hv',
-		['help',
-		'verbose',
-		'version',
-		])
-except getopt.GetoptError as err:
-	print('ERROR:', err)
-	sys.exit(1) # exit with error
+shortOpts = 'hv'
+longOpts = [
+	'help',
+	'verbose',
+	'version',
+	]
 
+# parsed options and gathers remainder (command)
+options, remainder = parseOptions(sys.argv[1:], shortOpts, longOpts)
+
+# deals with options accordingly
 for opt, arg in options:
 	if opt in ('-h', '--help'):
 		help.display = True
