@@ -38,7 +38,7 @@ alias todo='bash ~/Scripts/todo/run.sh'
 alias clk='bash ~/Scripts/clk/run.sh'
 
 alias ns='npm start'
-alias rct='bash ~/Scripts/rct/run.sh'
+alias rct='python3 ~/Scripts/rct/run.py'
 
 #________________________________________________________________________________
 #__________Open
