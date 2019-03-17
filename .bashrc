@@ -2,7 +2,7 @@ source ${HOME}/Scripts/colorSettings.sh
 
 #________________________________________________________________________________
 #__________Local (not trackable)
-source ${HOME}/.locrc
+source ${HOME}/.locrc.sh
 
 #________________________________________________________________________________
 #__________File
@@ -43,7 +43,6 @@ alias rn='python3 ~/Scripts/rn/run.py'
 #________________________________________________________________________________
 #__________Open
 alias pdf="open"
-alias image='/usr/bin/xdg-open'
 
 # p equates to whichever python is active
 alias p='/opt/local/bin/python3.7'
