@@ -1,5 +1,5 @@
 #!/bin/bash
-hr="${HOME}/Scripts/rct"
+hr="${HOME}/Scripts/rn"
 rsrc="${hr}/rsrc"
 linter="${rsrc}/eslintrc"
 readme="${rsrc}/readme.md"

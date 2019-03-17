@@ -8,6 +8,7 @@ help = Message(
 '''options
 	-h, --help: help menu
 	--version: version
+
 commands
 	d: move all the documentation
 	l: setup eslint in a project directory
@@ -50,6 +51,8 @@ elif remainder == ['l']:
 elif remainder == ['r']:
 	api.cmd('runProject')
 else:
+	print('Wrapper for react-native')
+	print()
 	print(version.content)
 	print()
 	print(help.content)
