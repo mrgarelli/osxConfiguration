@@ -38,6 +38,7 @@ alias C='bash ~/Scripts/gcc/C.sh'
 alias todo='bash ~/Scripts/todo/run.sh'
 alias clk='bash ~/Scripts/clk/run.sh'
 
+alias p='python3'
 alias ns='npm start'
 alias clrCsh='watchman watch-del-all && react-native start --reset-cache'
 alias rn='python3 ~/Scripts/rn/run.py'
