@@ -1,4 +1,4 @@
-import subprocess
+from subprocess import Popen, PIPE
 import sys
 import os
 import getopt
@@ -36,9 +36,9 @@ class BashAPI():
 		command = ''.join(['. ', self.api, ' && ', function])
 		# print(command)
 		# create a pipeline to a subprocess
-		pipe = subprocess.Popen(['bash', '-c', command])
+		pipe = Popen(['bash', '-c', command], stdout=PIPE, stdin=PIPE, stderr=PIPE)
 		# run command and gather output
-		output = pipe.communicate()[0]
+		output, error = pipe.communicate()
 		# print output (if there are errors)
 		if output != None:
 			print(output)

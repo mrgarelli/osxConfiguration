@@ -32,6 +32,7 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 alias g='bash ~/Scripts/git/g.sh'
 alias cg='bash ~/Scripts/git/cg.sh'
+alias pypi='bash ~/Scripts/pypi/run.sh'
 
 alias C='bash ~/Scripts/gcc/C.sh'
 alias todo='bash ~/Scripts/todo/run.sh'
