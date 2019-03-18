@@ -48,8 +48,8 @@ generalGitWrapper () {
 		"rma")
 			cmdRef="$cmdRef rm -r --cached . ${restOfInputs}"
 			;;
-		"rs")
-			cmdRef="$cmdRef remote show ${restOfInputs}"
+		"rv")
+			cmdRef="$cmdRef remote -v ${restOfInputs}"
 			;;
 		"s")
 			cmdRef="$cmdRef status ${restOfInputs}"
@@ -72,7 +72,7 @@ generalGitWrapper () {
 			echo -e "r:\tremote"
 			echo -e "ra:\tremote add"
 			echo -e "rma:\trm -r --cached ."
-			echo -e "rs:\tremote show"
+			echo -e "rv:\tremote -v"
 			echo -e "s:\tstatus"
 			echo -e "t:\tls-tree -r --name-only"
 			echo 

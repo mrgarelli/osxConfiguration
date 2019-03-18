@@ -26,4 +26,9 @@
 * linuxbrew-wrapper
 	* watchman
 * nvm
+
+### pip (python3)
+* getopt
+
+# consider installing
 * cntlm
