@@ -2,7 +2,7 @@
 #	implement verbose
 
 import sys
-from tools import Message, BashAPI, parseOptions
+from syspy import Message, BashAPI, parseOptions, fail, succeed, getInputs
 
 version = Message('Version: 1.0')
 
@@ -27,32 +27,34 @@ longOpts = [
 	]
 
 # parsed options and gathers remainder (command)
-options, remainder = parseOptions(sys.argv[1:], shortOpts, longOpts)
+options, remainder = parseOptions(getInputs(), shortOpts, longOpts)
 
 # deals with options accordingly
 for opt, arg in options:
 	if opt in ('-h', '--help'):
 		help.display = True
 		help.smartPrint()
-		sys.exit(0) # exit properly
+		succeed()
 	elif opt in ('-v', '--verbose'):
 		verbose = True
 	elif opt == '--version':
 		version.display = True
 		version.smartPrint()
-		sys.exit(0) # exit properly
+		succeed()
 
 api = BashAPI('api.sh')
 if remainder == ['d']:
-	api.cmd('documentationMigration')
+	output = api.cmd('documentationMigration')
 elif remainder == ['l']:
-	api.cmd('linterInstallation')
+	output = api.cmd('linterInstallation')
 elif remainder == ['r']:
-	api.cmd('runProject')
+	output = api.cmd('runProject')
 else:
 	print('Wrapper for react-native')
 	print()
 	print(version.content)
 	print()
 	print(help.content)
-	sys.exit(1) # exit with error
+	fail()
+
+print(output)
