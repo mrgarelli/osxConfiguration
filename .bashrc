@@ -14,7 +14,7 @@ alias search='bash ~/Scripts/search.sh'
 
 #________________________________________________________________________________
 #__________To Symlink
-alias b='bash ~/Scripts/b.sh'
+alias b='bash ~/Scripts/b/run.sh'
 alias hr='bash ~/Scripts/hr.sh'
 alias hs='bash ~/Scripts/hs.sh'
 alias s='bash ~/Scripts/s.sh'
