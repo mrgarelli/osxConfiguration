@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chrome='/usr/bin/chromium-browser'
+chrome='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 agenda="${HOME}/Scripts/todo/agenda.md"
 
 opts=':e'
@@ -17,4 +17,5 @@ while getopts ${opts} opt; do
 	shift
 done
 
-${chrome} ${agenda} &>/dev/null
+"${chrome}" ${agenda} &>/dev/null
+

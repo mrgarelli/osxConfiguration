@@ -1,5 +1,6 @@
 import sys
-from syspy import Message, BashAPI, parseOptions, fail, succeed, getInputs
+import os
+from syspy import Message, BashAPI, parseOptions, fail, succeed, getInputs, editor
 
 version = Message('Version: 1.0')
 
@@ -13,6 +14,9 @@ help = Message(
 
 verbose = False
 
+bashrc = os.path.expanduser('~/.bashrc')
+locrc = os.path.expanduser('~/.locrc.sh')
+
 shortOpts = 'ehv'
 longOpts = [
 	'el',
@@ -25,14 +29,15 @@ longOpts = [
 options, remainder = parseOptions(getInputs(), shortOpts, longOpts)
 
 api = BashAPI('api.sh')
+toEdit = None
 
 # deals with options accordingly
 for opt, arg in options:
 	if opt in ('-e'):
-		api.cmd('edit')
-	if opt in ('--el'):
-		api.cmd('editLocal')
-	if opt in ('-h', '--help'):
+		toEdit = bashrc
+	elif opt in ('--el'):
+		toEdit = locrc
+	elif opt in ('-h', '--help'):
 		help.display = True
 		help.smartPrint()
 		succeed()
@@ -43,18 +48,12 @@ for opt, arg in options:
 		version.smartPrint()
 		succeed()
 
-if remainder == ['d']:
-	output = api.cmd('documentationMigration')
-elif remainder == ['l']:
-	output = api.cmd('linterInstallation')
-elif remainder == ['r']:
-	output = api.cmd('runProject')
+output = ''
+
+if toEdit != None:
+	editor(toEdit)
+	output = api.cmd('sourceBash', shell=True)
 else:
-	print('Wrapper for bash')
-	print()
-	print(version.content)
-	print()
-	print(help.content)
-	fail()
+	output = api.cmd('bash', args=remainder)
 
 print(output)
