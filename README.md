@@ -5,7 +5,7 @@
 ### [Update Bash](.rsrc/updateBash.md)
 
 ### Activate Default Profile
-* in home directory create/edit .bash_profile
+* in home directory create/edit .bash\_profile
 > source "${HOME}/.bashrc"
 
 # Installations
@@ -15,7 +15,9 @@
 * git
 * cask
 	* iterm2
+	* spectacle
 * macvim (for clipboard+)
+
 
 # consider installing
 * nodejs

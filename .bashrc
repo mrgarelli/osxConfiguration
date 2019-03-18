@@ -38,7 +38,8 @@ alias todo='bash ~/Scripts/todo/run.sh'
 alias clk='bash ~/Scripts/clk/run.sh'
 
 alias ns='npm start'
-alias rct='/usr/local/bin/react-native'
+alias rct='/Users/kzgxmp/.nvm/versions/node/v9.7.1/bin/react-native'
+alias clrCsh='watchman watch-del-all && react-native start --reset-cache'
 
 #________________________________________________________________________________
 #__________Open
