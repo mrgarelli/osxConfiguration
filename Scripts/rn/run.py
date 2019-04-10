@@ -43,6 +43,7 @@ for opt, arg in options:
 		version.smartPrint()
 		succeed()
 
+output = ''
 api = BashAPI('api.sh')
 if remainder == ['d']:
 	output = api.cmd('documentationMigration')
@@ -60,4 +61,4 @@ else:
 	print(help.content)
 	fail()
 
-print(output)
+if output not in ['']: print(output)

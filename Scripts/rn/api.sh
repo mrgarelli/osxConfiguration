@@ -23,7 +23,7 @@ function linterInstallation() {
 }
 
 function runProject() {
-	react-native run-ios
+	react-native run-ios --simulator='iPhone X'
 }
 
 function npmRun() {

@@ -18,11 +18,17 @@ generalGitWrapper () {
 		"c")
 			cmdRef="$cmdRef commit ${restOfInputs}"
 			;;
+		"ca")
+			cmdRef="$cmdRef commit --amend ${restOfInputs}"
+			;;
 		"ch")
 			cmdRef="$cmdRef checkout ${restOfInputs}"
 			;;
 		"chb")
 			cmdRef="$cmdRef checkout -b ${restOfInputs}"
+			;;
+		"chl")
+			cmdRef="$cmdRef checkout - ${restOfInputs}"
 			;;
 		"i")
 			cmdRef="$cmdRef init ${restOfInputs}"
@@ -35,6 +41,9 @@ generalGitWrapper () {
 			;;
 		"ph")
 			cmdRef="$cmdRef push ${restOfInputs}"
+			;;
+		"pl")
+			cmdRef="$cmdRef pull ${restOfInputs}"
 			;;
 		"plr")
 			cmdRef="$cmdRef pull --rebase ${restOfInputs}"
@@ -62,12 +71,15 @@ generalGitWrapper () {
 			echo -e "aa:\tadd ."
 			echo -e "b:\tbranch"
 			echo -e "c:\tcommit"
+			echo -e "ca:\tcommit --amend"
 			echo -e "ch:\tcheckout"
 			echo -e "chb:\tcheckout -b"
+			echo -e "chl:\tcheckout -"
 			echo -e "i:\tinit"
 			echo -e "l:\tlog"
 			echo -e "m:\tmerge"
 			echo -e "ph:\tpush"
+			echo -e "pl:\tpull"
 			echo -e "plr:\tpull --rebase"
 			echo -e "r:\tremote"
 			echo -e "ra:\tremote add"
@@ -77,6 +89,8 @@ generalGitWrapper () {
 			echo -e "t:\tls-tree -r --name-only"
 			echo 
 			echo 'to add: difftool branch1..branch2 -- fileName'
+			echo 'git push origin --delete branchName'
+			echo 'git push -u origin HEAD'
 			exit
 			;;
 		*)

@@ -1,5 +1,5 @@
+# export PS1="\w \$ "
 source ${HOME}/Scripts/colorSettings.sh
-# export PS1="\W \$ "
 
 #________________________________________________________________________________
 #__________Local (not trackable)
