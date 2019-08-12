@@ -1,3 +1,4 @@
+# export PS1="\w \$ "
 source ${HOME}/Scripts/colorSettings.sh
 
 #________________________________________________________________________________
@@ -19,8 +20,12 @@ alias hr='bash ~/Scripts/hr.sh'
 alias hs='bash ~/Scripts/hs.sh'
 alias s='bash ~/Scripts/s.sh'
 alias sz='bash ~/Scripts/sz.sh'
-alias t='bash ~/Scripts/t.sh'
 alias r='bash ~/Scripts/r.sh'
+
+t="${HOME}/Scripts/t.sh"
+alias t="bash ${t}"
+alias grp="bash ${t} | grep -i"
+alias tsc="${HOME}/Desktop/tardis/packages/greenfield-container/node_modules/typescript/bin/tsc"
 
 #________________________________________________________________________________
 #__________System

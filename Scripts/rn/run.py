@@ -14,7 +14,8 @@ help = Message(
 commands
 	d: move all the documentation
 	l: setup eslint in a project directory
-	r: react-native run-ios'''
+	r: react-native run-ios
+	n: npm run ios'''
 )
 
 verbose = False
@@ -42,13 +43,16 @@ for opt, arg in options:
 		version.smartPrint()
 		succeed()
 
+output = ''
 api = BashAPI('api.sh')
 if remainder == ['d']:
 	output = api.cmd('documentationMigration')
 elif remainder == ['l']:
-	output = api.cmd('linterInstallation')
+	api.cmd('linterInstallation', realTime=True)
 elif remainder == ['r']:
-	output = api.cmd('runProject')
+	api.cmd('runProject', realTime=True)
+elif remainder == ['n']:
+	api.cmd('npmRun', realTime=True)
 else:
 	print('Wrapper for react-native')
 	print()
@@ -57,4 +61,4 @@ else:
 	print(help.content)
 	fail()
 
-print(output)
+if output not in ['']: print(output)
