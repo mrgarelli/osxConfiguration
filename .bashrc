@@ -37,6 +37,7 @@ alias pypi='bash ~/Scripts/pypi/run.sh'
 alias C='bash ~/Scripts/gcc/C.sh'
 alias todo='bash ~/Scripts/todo/run.sh'
 alias clk='bash ~/Scripts/clk/run.sh'
+alias url='python3 ~/Scripts/url/run.py'
 
 alias p='python3'
 alias ns='npm start'
@@ -46,9 +47,3 @@ alias rn='python3 ~/Scripts/rn/run.py'
 #________________________________________________________________________________
 #__________Open
 alias pdf="open"
-
-alias urldecode='python3 -c "import sys, urllib.parse as ul; \
-    print(ul.unquote_plus(sys.argv[1]))"'
-
-alias urlencode='python3 -c "import sys, urllib.parse as ul; \
-    print(ul.quote_plus(sys.argv[1]))"'
