@@ -3,7 +3,7 @@ source ${HOME}/Scripts/git/general.sh
 vscode="${HOME}/Library/Application Support/Code/User"
 
 g='/usr/bin/git'
-config="--git-dir=${HOME}/.cfg --work-tree=${HOME}"
+config="--git-dir=${HOME}/.sys --work-tree=${HOME}"
 cmd="${g} ${config}"
 
 
