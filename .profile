@@ -11,4 +11,7 @@ alias pdf="open"
 
 # alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
+# for coreutils (realpath)
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
 echo 'Sourced ~/.profile'
