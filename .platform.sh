@@ -14,4 +14,4 @@ alias pdf="open"
 # for coreutils (realpath)
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-echo 'Sourced ~/.profile'
+echo '. ~/.platform.sh'
