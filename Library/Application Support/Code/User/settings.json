@@ -5,7 +5,7 @@
 	"workbench.startupEditor": "none",
 	"editor.lineNumbers": "relative",
 	"editor.tabSize": 2,
-	"editor.insertSpaces": false,
+	"editor.insertSpaces": true,
 	"editor.detectIndentation": false,
 	"vim.useSystemClipboard": true,
 	"workbench.settings.editor": "json",
@@ -13,4 +13,5 @@
 	"editor.tabCompletion": "onlySnippets",
 	"keyboard.dispatch": "keyCode",
 	"window.restoreWindows": "none",
+  "jest.debugMode": true,
 }
