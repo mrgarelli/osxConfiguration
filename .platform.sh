@@ -1,3 +1,5 @@
+export CLICOLOR=1
+export LSCOLORS="EHfxcxdxBxegecabagacad"
 
 #________________________________________________________________________________
 #__________Programs
