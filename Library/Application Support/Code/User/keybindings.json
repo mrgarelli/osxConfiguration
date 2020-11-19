@@ -188,7 +188,7 @@
 		"command": "-workbench.action.files.openFileFolder"
 	},
 	{
-		"key": "cmd+o",
+		"key": "cmd+p",
 		"command": "workbench.action.keepEditor"
 	},
 	{
@@ -201,7 +201,7 @@
 		"when": "textInputFocus"
 	},
 	{
-		"key": "cmd+r",
+		"key": "cmd+x",
 		"command": "references-view.find",
 		"when": "editorHasReferenceProvider"
 	},
@@ -225,12 +225,7 @@
 		"command": "-extension.vim_ctrl+u",
 		"when": "editorTextFocus && vim.active && vim.use<C-u> && !inDebugRepl"
 	},
-	{
-		"key": "cmd+u",
-		"command": "extension.vim_ctrl+d",
-		"when": "editorTextFocus && vim.active && !inDebugRepl"
-	},
-	{
+  {
 		"key": "ctrl+d",
 		"command": "-extension.vim_ctrl+d",
 		"when": "editorTextFocus && vim.active && !inDebugRepl"
@@ -247,8 +242,247 @@
 		"key": "cmd+e",
 		"command": "-actions.findWithSelection"
 	},
-	{
-		"key": "cmd+e",
-		"command": "workbench.action.focusActiveEditorGroup"
-	}
+  {
+    "key": "cmd+x",
+    "command": "-editor.action.webvieweditor.cut",
+    "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+  },
+  {
+    "key": "cmd+x",
+    "command": "-execCut"
+  },
+  {
+    "key": "cmd+x",
+    "command": "-filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.quickInputBack",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.quickInputBack",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openLocalFileFolder",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "cmd+z",
+    "command": "-editor.action.customEditor.undo",
+    "when": "focusedCustomEditorIsEditable && !inputFocus"
+  },
+  {
+    "key": "cmd+z",
+    "command": "-editor.action.webvieweditor.undo",
+    "when": "!editorFocus && !inputFocus && !webviewHasOwnEditFunctions && activeEditor == 'WebviewEditor'"
+  },
+  {
+    "key": "cmd+z",
+    "command": "-undo",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "cmd+v",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-editor.action.clipboardPasteAction",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-editor.action.webvieweditor.paste",
+    "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-extension.vim_cmd+v",
+    "when": "editorTextFocus && vim.active && vim.overrideCmdV && vim.use<D-v> && !inDebugRepl"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-execPaste"
+  },
+  {
+    "key": "cmd+v",
+    "command": "workbench.action.terminal.paste",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-workbench.action.terminal.paste",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+v",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+v",
+    "command": "default:paste"
+  },
+  {
+    "key": "cmd+v",
+    "command": "execPaste"
+  },
+  {
+    "key": "cmd+v",
+    "command": "paste"
+  },
+  {
+    "key": "cmd+v",
+    "command": "editor.action.webvieweditor.paste"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "cmd+k cmd+down",
+    "command": "-workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "java.action.clipboardPasteAction",
+    "when": "javaLSReady && editorLangId == 'java'"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "-java.action.clipboardPasteAction",
+    "when": "javaLSReady && editorLangId == 'java'"
+  },
+  {
+    "key": "cmd+v",
+    "command": "extension.vim_cmd+v"
+  },
+  {
+    "key": "cmd+y",
+    "command": "extension.vim_cmd+c"
+  },
+  {
+    "key": "cmd+s",
+    "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-workbench.action.findInFiles"
+  },
+  {
+    "key": "cmd+s",
+    "command": "workbench.action.terminal.searchWorkspace",
+    "when": "terminalFocus && terminalProcessSupported && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-workbench.action.terminal.searchWorkspace",
+    "when": "terminalFocus && terminalProcessSupported && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "key": "cmd+s",
+    "command": "workbench.view.search",
+    "when": "!searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-workbench.view.search",
+    "when": "!searchViewletVisible"
+  },
+  {
+    "key": "cmd+s",
+    "command": "-workbench.action.files.save"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+u",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "shift+f12",
+    "command": "-editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  }
 ]

@@ -1,1 +1,46 @@
-<keymap version="1" name="deku" parent="Mac OS X 10.5+" />
+<keymap version="1" name="deku" parent="Mac OS X 10.5+">
+  <action id="Android.CleanRun" />
+  <action id="Back">
+    <keyboard-shortcut first-keystroke="meta open_bracket" />
+    <keyboard-shortcut first-keystroke="meta alt left" />
+    <mouse-shortcut keystroke="button4" />
+    <keyboard-shortcut first-keystroke="meta r" />
+  </action>
+  <action id="CheckinProject" />
+  <action id="EditorRight">
+    <keyboard-shortcut first-keystroke="right" />
+  </action>
+  <action id="Find" />
+  <action id="FindInPath">
+    <keyboard-shortcut first-keystroke="shift meta f" />
+    <keyboard-shortcut first-keystroke="meta s" />
+  </action>
+  <action id="GotoDeclaration">
+    <keyboard-shortcut first-keystroke="meta b" />
+    <mouse-shortcut keystroke="meta button1" />
+    <mouse-shortcut keystroke="button2" />
+    <keyboard-shortcut first-keystroke="meta f" />
+  </action>
+  <action id="ImplementMethods" />
+  <action id="InsertLiveTemplate" />
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="shift meta close_bracket" />
+    <keyboard-shortcut first-keystroke="ctrl right" />
+    <keyboard-shortcut first-keystroke="meta j" />
+  </action>
+  <action id="PreviousTab">
+    <keyboard-shortcut first-keystroke="shift meta open_bracket" />
+    <keyboard-shortcut first-keystroke="ctrl left" />
+    <keyboard-shortcut first-keystroke="meta k" />
+  </action>
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="meta i" />
+  </action>
+  <action id="Refresh" />
+  <action id="Replace" />
+  <action id="SaveAll" />
+  <action id="TodoViewGroupByFlattenPackage" />
+  <action id="Vcs.Log.GoToRef" />
+  <action id="Vcs.Log.Refresh" />
+  <action id="hg4idea.QRefresh" />
+</keymap>

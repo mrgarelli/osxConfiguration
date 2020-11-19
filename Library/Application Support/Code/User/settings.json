@@ -6,12 +6,28 @@
 	"editor.lineNumbers": "relative",
 	"editor.tabSize": 2,
 	"editor.insertSpaces": true,
-	"editor.detectIndentation": false,
+  "editor.detectIndentation": false,
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4  
+  },
 	"vim.useSystemClipboard": true,
-	"workbench.settings.editor": "json",
-	"editor.fontSize": 13,
+  "workbench.settings.editor": "json",
 	"editor.tabCompletion": "onlySnippets",
 	"keyboard.dispatch": "keyCode",
 	"window.restoreWindows": "none",
   "jest.debugMode": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.jediEnabled": false,
+  "window.zoomLevel": -1,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+"python.pythonPath": "/usr/local/opt/python/bin/python3.7",
+"python.languageServer": "Microsoft",
+"[typescriptreact]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"terminal.integrated.shell.osx": "/usr/local/bin/xonsh",
 }
